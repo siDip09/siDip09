@@ -1,0 +1,41 @@
+
+#mySelect {
+  /* Add some basic styling to the select element */
+  width: 200px;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Style the option elements */
+#mySelect option {
+  /* Add some basic styling to the option elements */
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style the selected option */
+#mySelect option:selected {
+  /* Add some basic styling to the selected option */
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+/* Style the dropdown arrow */
+#mySelect::-webkit-scrollbar {
+  /* Add some basic styling to the dropdown arrow */
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+#mySelect::-webkit-scrollbar-thumb {
+  /* Add some basic styling to the dropdown arrow thumb */
+  background-color: #666;
+  border-radius: 5px;
+}

@@ -1,0 +1,135 @@
+
+<html>
+    <title>Contact</title>
+    <body>
+        <center>
+        <img src="logo.jpg" alt="Big Bull" width="200vw" height="60">
+        <meta name="viewport" content="width=device-width, initial-scale=1"></center><br>
+        <center>
+            <header><h3>All things finance,<br>
+                right here.</h3></header>
+          </center>
+        <body background="bg.jpg.jpg"alt="Smiley face" width="40" height="100" style="border:5px solid rgb(2, 2, 2)">
+    
+
+        <style>
+            .btn {
+              background-color: rgb(14, 239, 255);
+              border: none;
+              color: white;
+              padding: 12px 50px;
+              font-size: 16px;
+              cursor: pointer;
+            }
+            #btn{
+                text-align: center;
+            }
+            
+            /* Darker background on mouse-over */
+            .btn:hover {
+              background-color: rgb(248, 248, 248);
+            }
+            </style>
+    <div id="btn">
+    <button class="btn"><i class="fa fa-home"></i><p><a href="index.php">Home</a></p></button>
+    <button class="btn"><i class="fa fa-bars"></i><p><a href="calculator.html">Calculator</a></p></button>
+    <button class="btn"><i class="fa fa-close"></i><p><a href="Bm.html">Best Mutual Funds</a></p></button>
+    <button class="btn"><i class="fa fa-folder"></i><p><a href="contact.html">Contact Us</a></p></button>
+    <button class="btn"><i class="fa fa-home"></i><p><a href="signup.php">Signup/Login</a></p></button>
+    <button class="btn"><i class="fa fa-home"></i><p><a href="admin.html">Admin Option</a></p></button>
+    <button class="btn"><i class="fa fa-home"></i><p><a href="upgrade.html">About Us</a></p></button>
+    </div>
+    </body>
+</html>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+		.container {
+			width: 80%;
+			margin: 50px auto;
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.input-field {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #000000;
+		}
+		.button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		.submitted-message {
+			display: none;
+			padding: 20px;
+			background-color: #dff0df;
+			border: 1px solid #3e8e41;
+			border-radius: 5px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Contact Us</h2>
+		<form id="contact-form">
+			<div class="form-group">
+				<label for="name" class="label">Name:</label>
+				<input type="text" id="name" name="name" class="input-field" required>
+			</div>
+			<div class="form-group">
+				<label for="email" class="label">Email:</label>
+				<input type="email" id="email" name="email" class="input-field" required>
+			</div>
+			<div class="form-group">
+				<label for="message" class="label">Message:</label>
+				<textarea id="message" name="message" class="input-field" required></textarea>
+			</div>
+			<button type="submit" class="button">Send Message</button>
+			<div class="submitted-message" id="submitted-message">
+				<p>Your message has been sent successfully!</p>
+				<p>We will be contact as soon as posible with your given email id:</p>
+				<ul id="submitted-data">
+				</ul>
+			</div>
+		</form>
+	</div>
+
+	<script>
+		const form = document.getElementById('contact-form');
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const message = document.getElementById('message').value;
+			const submittedMessage = document.getElementById('submitted-message');
+			const submittedData = document.getElementById('submitted-data');
+			submittedMessage.style.display = 'block';
+			submittedData.innerHTML = `
+				<li><strong>Name:</strong> ${name}</li>
+				<li><strong>Email:</strong> ${email}</li>
+				<li><strong>Message:</strong> ${message}</li>
+			`;
+		});
+	</script>
+</body>
+</html>
